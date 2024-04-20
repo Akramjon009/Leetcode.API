@@ -1,4 +1,4 @@
-using Leetcode.API.Services;
+using Leetcode.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +6,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<ICompilerService, CompilerService>();
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
